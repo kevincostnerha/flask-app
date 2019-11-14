@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h2>Quiz</h2>
+  <div id="status"></div>
+
+  <!-- If the email successfully sends, you get your message -->
+  {% if success %}
+    <p>Thank you for your message. We'll get back to you shortly.</p>
+  
+  <!-- If the email hasn't been sent, user interacts with the contact form. -->
+  {% else %}  
+
+    <!--form.hidden_tag() w/ SECRET_KEY protects against cross-site request forgery attacks-->
+    <form action="{{ url_for('quiz') }}" method=post>
+      {{ form.hidden_tag() }}
+      {{ form.question01.label }}{{ form.question01 }}
+      {{ form.question02.label }}{{ form.question02 }}
+      {{ form.question03.label }}{{ form.question03 }}
+      {{ form.question04.label }}{{ form.question04 }}
+      {{ form.question05.label }}{{ form.question05 }}
+      {{ form.question06.label }}{{ form.question06 }}
+      {{ form.question07.label }}{{ form.question07 }}
+      {{ form.question08.label }}{{ form.question08 }}
+      {{ form.question09.label }}{{ form.question09 }}
+      {{ form.question10.label }}{{ form.question10 }}
+
+      {{ form.submit }}
+    </form>
+
+    <script type="text/javascript">
+      // source: https://www.w3schools.com/jsref/met_win_setinterval.asp
+      // setting the timer to 5 seconds to just show it works should be set to 3600
+      seconds = 10;
+      timer = setInterval(function () {
+      
+      if(seconds > 0){
+        var element = document.getElementById("status");
+        element.innerHTML = "<h2>You have <b>"+seconds+"</b> remaining</h2>";
+      }
+
+      if(seconds == 0){
+        document.getElementById("submit").click();
+
+        // timer goes into the negative so replace with static message
+        var element = document.getElementById("status");
+        element.innerHTML = "<h2>Time Over!</h2>";
+      }
+      
+      seconds--;
+      }, 1000)
+    </script>
+  
+  {% endif %}
+{% endblock %} 
