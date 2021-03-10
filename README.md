@@ -25,6 +25,10 @@ Once you have registered an account, the admin will have to verify that you are 
 
 
 ## 4. Take the Quiz
-Once on the quiz page, the user will have the chance to answer ten multiple choice questions. After the user has answered all of the questions--or as many questions as they could--they can click the submit button to send the results of their quiz to our client via email. If for some reason, the user is unable to complete the quiz within the allotted time or for some reason chooses not to submit the quiz, the quiz will automatically submit itself--again sending the results of the quiz to our clients at Reliable Robotics.
+Once on the quiz page, the user will have the chance to answer ten multiple choice questions. After the user has answered all of the questions--or as many questions as they could--they can click the submit button to send the results of their quiz to our client via email. If for some reason, the user is unable to complete the quiz within the allotted time or for some reason chooses not to submit the quiz, the quiz will automatically submit itself--again sending the results of the quiz to the client.
 
+<img src="https://i.imgur.com/YRjvjLW.png" width="600"/>
 
+Once you have submitted the quiz, or the time runs out and the quiz submits itself, you will be redirected to another page that thanks you for completing the quiz.
+
+<img src="https://i.imgur.com/nr6UCnK.png" width="600"/>
